@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Unit9";
+}
+
+<h2>Unit9</h2>
+
+<script src="~/Scripts/Training4.js" type="text/javascript"></script>
+
+<form name="gameForm" action="/Training/gameForm" method="post">
+
+    Name of the Game: <input type="text" name="gameName" />
+    <br />
+    Game Price: <input type="text" name="gamePrice" />
+ 
+    <button type="submit">Send Info</button>
+
+</form>
+
+<button type="button" onclick="gameInputed()">List Games</button>
+<span id="games"></span>
+
+<hr />
+
+<h2>Steps</h2>
+
+<ol>
+    <li>
+        <input type="checkbox" checked /> Add view function to controller - Unit9()
+    </li>
+    <li>
+        <input type="checkbox" checked /> Create view - Unit9.cshtml
+    </li>
+    <li>
+        <input type="checkbox" checked /> Code form to input game info - gameForm
+    </li>
+    <li>
+        <input type="checkbox" checked /> Code controller function to process game info form - gameForm(FormCollection form)
+    </li>
+    <li>
+        <input type="checkbox" checked /> Code button to list games - "List Games" button
+    </li>
+    <li>
+        <input type="checkbox" checked /> Create javascript function to pull list of games - gameInputed
+    </li>
+    <li>
+        <input type="checkbox" checked /> Code controller function to get list of games - GetGames
+    </li>
+</ol>

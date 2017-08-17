@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Unit6";
+}
+
+<h2>People Who Own Coins</h2>
+@{
+    List<TrainingProject.Models.SpecialCoin> coins = ViewBag.Coins;
+}
+
+<script src="~/Scripts/Training2.js" type="text/javascript"></script>
+
+<form name="myForm" id="myForm">
+    <h2>Coins</h2>
+    @for (int i = 0; i < coins.Count; i++)
+    {
+        <div>
+            <input id="person_@coins[i].SpecialCoinID" type="radio" name="radCoin" onchange="coinChanged()" value="@coins[i].SpecialCoinID" />&nbsp;<label for="person_@coins[i].SpecialCoinID">@coins[i].Type</label>
+        </div>
+    }
+
+    <h2>People who own<span id="coinName"></span></h2>
+
+    <span id="selectedCoin"></span>
+
+</form>
+
+

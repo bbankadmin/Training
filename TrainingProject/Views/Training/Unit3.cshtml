@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Unit3";
+}
+
+<h2>Unit3</h2>
+
+@{ 
+    List<TrainingProject.Models.PersonModel> classroom = ViewBag.Classroom;
+}
+
+@for (var i = 0; i < classroom.Count; i++)
+{
+    <div>
+        <h2>@classroom[i].FirstName</h2>
+    @if (classroom[i] is TrainingProject.Models.Student)
+    {
+        var student = (TrainingProject.Models.Student)classroom[i];
+        <span>
+            Role: Student
+            <br />
+            Textbook(s) : 
+        </span>
+        <ul>
+            @for (int j=0; j < student.Textbooks.Count; j++)
+            {
+            <li>@student.Textbooks[j]</li>
+            }
+        </ul>
+    }
+    @if (classroom[i] is TrainingProject.Models.Teacher)
+    {
+        var teacher = (TrainingProject.Models.Teacher)classroom[i];
+        <span>
+            Role: Teacher
+            <br />
+            Teaching Material(s) :
+        </span>
+        <ul>
+              @for (int j = 0; j < teacher.TeachingMaterials.Count; j++)
+            {
+                <li>@teacher.TeachingMaterials[j]</li>
+            }
+        </ul>
+    }
+    </div>
+}

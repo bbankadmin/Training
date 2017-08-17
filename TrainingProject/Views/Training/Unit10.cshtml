@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Unit10";
+}
+
+<h2>Unit10</h2>
+
+<script src="~/Scripts/Training5.js?q=1" type="text/javascript"></script>
+
+<div>
+
+    Enter string to reverse: <input type="text" id="inputString" onkeyup="checkEnter(event)"/><button id="btnReverse" onclick="reverseString()">Reverse</button>
+    <br />
+    Output: <span id="reversed"></span>
+
+</div>
+
+@section scripts {
+<script>
+    // document.ready means, run this after everything on the page has been loaded
+    $(document).ready(function () {
+        $('#inputString').focus();
+    });
+</script>
+}

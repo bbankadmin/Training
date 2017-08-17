@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Unit4";
+}
+
+<h2>Coin Entry Form</h2>
+
+@Model.OriginCountry @Model.YearMinted @Model.CoinMaterial @Model.CoinValue
+
+
+<form name="coinForm" action="/Training/coinForm" method="post">
+
+    Coin Country of Origin: <input type="text" name="originCountry" />
+    <br />
+    Year Minted: <input type="text" name="yearMinted" />
+    <br />
+    Coin Metal: <input type="text" name="coinMaterial" />
+    <br />
+   Coin Value: <input type="text" name="coinValue" />
+    <br/>
+    <button type="submit">Send Info</button>
+
+</form>

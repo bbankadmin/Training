@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Unit8";
+}
+
+<h2>Unit8</h2>
+
+@section scripts {
+<script>
+
+    function Playground() {
+
+        var myInteger = 1
+        var myInteger2 = "2";
+        var myString = "Hello World!";
+        var myDate = new Date();
+
+        var myCustom = {
+
+            Name : "Ed",
+            Age : 42,
+            FavoriteColor: "blue",
+            FavoriteFlavor: "strawberry"
+
+        }
+
+        //[{ "Game": { "GameID": 2, "GameName": "CSGO", "GamePrice": 15 } }, { "Game": { "GameID": 3, "GameName": "Garrys Mod", "GamePrice": 15 } }, { "Game": { "GameID": 5, "GameName": "Duck Game", "GamePrice": 13 } }]
+
+        var myCustomJson = "[ { \"CustomObject\" : { \"Name\" : \"Ed\", \"Age\" : 42, \"FavoriteColor\": \"blue\", \"FavoriteFlavor\": \"strawberry\"} } ]";
+
+        console.log(myInteger);
+        console.log(myString);
+        console.log(myDate);
+        console.log(myCustom);
+
+        console.log(myInteger + myString);
+        console.log(myInteger + myInteger2);
+        console.log(myInteger + parseInt(myInteger2));
+
+        console.log(myCustomJson);
+
+        console.log(myCustom.Name);
+        console.log(myCustomJson.Name);
+
+        var myObj = $.parseJSON(myCustomJson);
+
+        console.log(myObj);
+
+
+        $('#divA').html("Hello World!");
+        $('#divA').html("Bye!");
+        $('#divA').html("<table><tr><td>Hello World</td></tr></table>");
+
+        $('#divB').append("Hello World!");
+        $('#divB').append("Bye!");
+        $('#divB').append("<table><tr><td>Hello World</td></tr></table>");
+
+    }
+
+    Playground();
+
+</script>
+}
+
+
+<div id="divA">
+
+</div>
+<div id="divB">
+
+</div>
+<span id="spanA">
+
+</span>
+<span id="spanB">
+
+</span>

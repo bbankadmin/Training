@@ -1,0 +1,15 @@
+﻿@model TrainingProject.Models.ColorChoice
+@{
+    ViewBag.Title = "Unit2";
+}
+<body style="background-color:@Model.fav">
+    Your favorite color is @Model.fav
+    <h2>Unit2</h2>
+    Pick your favorite color.
+    <br />
+    <form name="colorForm" action="/Training/FavoriteColor" method="post">
+        <input type="color" name="color" onchange="this.form.submit()"/>
+        <button type="submit">No need for this button anymore</button>
+    </form>
+</body>
+
