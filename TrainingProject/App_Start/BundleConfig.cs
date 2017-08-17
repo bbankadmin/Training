@@ -28,6 +28,7 @@ namespace TrainingProject
                       "~/Content/site.css",
                       "~/Content/sweetalert2.css"));
 
+            // Requires sweetalert css
             bundles.Add(new ScriptBundle("~/bundles/sweetalert").Include(
                         "~/Scripts/sweetalert2.js"));
 
